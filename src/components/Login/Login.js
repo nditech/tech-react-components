@@ -23,9 +23,17 @@ export default class Login extends Component {
     });
   }
 
-  handleSubmit = event => {
+  handleSubmit = async event => {
     event.preventDefault();
+  
+    try {
+      await Auth.signIn(this.state.email, this.state.password);
+      alert("Logged in");
+    } catch (e) {
+        alert(e);
+    }
   }
+  
 
   render() {
     return (
@@ -47,7 +55,10 @@ export default class Login extends Component {
                 onChange={this.handleChange}
             />
           </FormGroup>
-          <Button>Login</Button>
+          <Button 
+            type="submit"
+            disabled={!this.validateForm()}
+          >Login</Button>
         </Form>
       </div>
     );
