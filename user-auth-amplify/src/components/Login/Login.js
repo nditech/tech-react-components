@@ -30,7 +30,7 @@ export default class Login extends Component {
       await Auth.signIn(this.state.email, this.state.password);
       alert("Logged in");
     } catch (e) {
-        alert(e);
+        alert(e.message);
     }
   }
   
