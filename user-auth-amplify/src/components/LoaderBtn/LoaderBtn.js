@@ -15,6 +15,6 @@ export default ({
     disabled={disabled || isLoading}
     {...props}
   >
-    {isLoading && <i class="fa fa-spinner fa-spin fa-fw"></i>}
+    {isLoading && <i className="fa fa-spinner fa-spin fa-fw"></i>}
     {!isLoading ? text : loadingText}
   </Button>;
