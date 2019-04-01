@@ -3,14 +3,18 @@ import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import { Auth } from "aws-amplify";
 import "./Login.css";
 
+import LoaderButton from '../LoaderBtn';
+
 export default class Login extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      email: "",
-      password: ""
-    };
+        isLoading: false,
+        email: "",
+        password: ""
+      };
+      
   }
 
   validateForm() {
@@ -26,14 +30,18 @@ export default class Login extends Component {
   handleSubmit = async event => {
     event.preventDefault();
   
+    this.setState({ isLoading: true });
+  
     try {
       await Auth.signIn(this.state.email, this.state.password);
       this.props.userHasAuthenticated(true);
       this.props.history.push("/");
     } catch (e) {
       alert(e.message);
+      this.setState({ isLoading: false });
     }
   }
+  
   
   
   render() {
@@ -56,10 +64,16 @@ export default class Login extends Component {
                 onChange={this.handleChange}
             />
           </FormGroup>
-          <Button 
-            type="submit"
+          <LoaderButton
+            block
+            bsSize="large"
             disabled={!this.validateForm()}
-          >Login</Button>
+            type="submit"
+            isLoading={this.state.isLoading}
+            text="Login"
+            loadingText="Logging in…"
+            />
+
         </Form>
       </div>
     );
