@@ -28,11 +28,13 @@ export default class Login extends Component {
   
     try {
       await Auth.signIn(this.state.email, this.state.password);
-      alert("Logged in");
+      this.props.userHasAuthenticated(true);
+      this.props.history.push("/");
     } catch (e) {
-        alert(e.message);
+      alert(e.message);
     }
   }
+  
   
   render() {
     return (
