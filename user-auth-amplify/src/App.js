@@ -1,7 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Link, withRouter } from "react-router-dom";
-
-import Routes from "./components/Routes";
+import { withRouter } from "react-router-dom";
 import {
     Collapse,
     Navbar,
@@ -17,7 +15,7 @@ import {
 from 'reactstrap';
 import { LinkContainer } from "react-router-bootstrap";
 import { Auth } from "aws-amplify";
-  
+import Routes from "./components/Routes";
 import './App.css';
 
 class App extends Component {
