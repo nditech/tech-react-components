@@ -11,8 +11,8 @@ import {
     UncontrolledDropdown,
     DropdownToggle,
     DropdownMenu,
-    DropdownItem } 
-from 'reactstrap';
+    DropdownItem 
+} from 'reactstrap';
 import { LinkContainer } from "react-router-bootstrap";
 import { Auth } from "aws-amplify";
 import Routes from "./components/Routes";
@@ -26,7 +26,6 @@ class App extends Component {
             isAuthenticated: false,
             isAuthenticating: true
         };
-          
     }
 
     async componentDidMount() {
@@ -39,23 +38,18 @@ class App extends Component {
             alert(e);
           }
         }
-      
         this.setState({ isAuthenticating: false });
-      }
-      
-      
+    }
+        
     userHasAuthenticated = authenticated => {
         this.setState({ isAuthenticated: authenticated });
     }
 
     handleLogout = async event => {
         await Auth.signOut();
-      
         this.userHasAuthenticated(false);
-      
         this.props.history.push("/login");
-      }
-      
+    }
       
     render() {
         const childProps = {
