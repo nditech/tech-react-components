@@ -84,14 +84,16 @@ export default class Signup extends Component {
         return (
             <Form onSubmit={this.handleConfirmationSubmit}>
                 <FormGroup>
-                <Label for="confirmationCode">Confirmation Code</Label>
-                <Input
-                    autoFocus
-                    type="tel" name="confirmationCode" id="confirmationCode"
-                    value={this.state.confirmationCode}
-                    onChange={this.handleChange}
-                />
-                <FormText color="muted">Please check your email for the code.</FormText>
+                    <Label for="confirmationCode">Confirmation Code</Label>
+                    <Input
+                        autoFocus
+                        type="tel" name="confirmationCode" id="confirmationCode"
+                        value={this.state.confirmationCode}
+                        onChange={this.handleChange}
+                    />
+                    <FormText color="muted">
+                        Please check your email for the code.
+                    </FormText>
                 </FormGroup>
                 <LoaderBtn
                     block
@@ -135,13 +137,13 @@ export default class Signup extends Component {
                     />
                 </FormGroup>
                 <LoaderBtn
-                block
-                bssize="large"
-                disabled={!this.validateForm()}
-                type="submit"
-                isLoading={this.state.isLoading}
-                text="Signup"
-                loadingText="Signing up…"
+                    block
+                    bssize="large"
+                    disabled={!this.validateForm()}
+                    type="submit"
+                    isLoading={this.state.isLoading}
+                    text="Signup"
+                    loadingText="Signing up…"
                 />
             </Form>
         );

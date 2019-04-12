@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import { Auth } from "aws-amplify";
 import LoaderButton from '../LoaderBtn';
@@ -61,6 +62,7 @@ export default class Login extends Component {
                         onChange={this.handleChange}
                     />
                 </FormGroup>
+                <Link to="/login/reset">Forgot password?</Link>
                 <LoaderButton
                     block
                     bssize="large"
