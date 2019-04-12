@@ -2,7 +2,15 @@
 
 *The code is a modification of the code from [Serverless Stack](https://serverless-stack.com/#table-of-contents). All credit goes to the people who built that awesome website: [Frank Wang](https://github.com/fwang) and [Jay V](https://github.com/jayair).*
 
-The app lets you create an account with your email address, verify your account with AWS Cognito, login and logout.
+The app lets you: 
+- Create an account with your email address.
+- Verify your account with AWS Cognito.
+- Login and logout.
+- Reset your password by sending a confirmation code to your email.
+
+> :construction: TODO:
+- User settings: change email, change password.
+- Code splitting for Router.
 
 Main differences between this app and the example on serverless-stack.com:
 
