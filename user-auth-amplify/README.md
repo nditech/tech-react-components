@@ -8,7 +8,7 @@ The app lets you:
 - Login and logout.
 - Reset your password by sending a confirmation code to your email.
 
-> :construction: TODO:
+**:construction: TODO:**
 - User settings: change email, change password.
 - Code splitting for Router.
 
@@ -25,6 +25,11 @@ You need:
 - [User Pool in AWS Cognito](https://serverless-stack.com/chapters/create-a-cognito-user-pool.html)
 
 You don't need S3, Lambda, API Gateway or DynamoDB for **this example**.
+
+Create a `config.js` file inside `./src` that looks like `./src/config.js-example`. 
+
+**NOTE:** It is ok to expose `USER_POOL_ID`, `APP_CLIENT_ID` and `IDENTITY_POOL_ID` as [explained by AWS](https://forums.aws.amazon.com/thread.jspa?threadID=245752&tstart=200). If you want to secure API calls to the back-end (DynamoDB, S3, etc.), [use API Gateway with Cognito](https://aws.amazon.com/blogs/mobile/aws-mobile-app-backend-with-hybrid-apps/), but that is out of the scope of this example.
+
 
 ## Usage
 
