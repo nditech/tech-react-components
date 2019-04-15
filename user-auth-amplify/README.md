@@ -1,6 +1,18 @@
 # User Authentication with AWS Amplify and Cognito
 
+## Documentation
+
 *The code is a modification of the code from [Serverless Stack](https://serverless-stack.com/#table-of-contents). All credit goes to the people who built that awesome website: [Frank Wang](https://github.com/fwang) and [Jay V](https://github.com/jayair).*
+
+### Table of Contents
+
+1. [Intro](#intro)
+1. [Demo](#demo)
+1. [Installation](#installation)
+1. [Usage](#usage)
+1. [Diagnosis](#diagnosis)
+
+## Intro
 
 The app lets you: 
 - Create an account with your email address.
@@ -12,9 +24,13 @@ The app lets you:
 - User settings: change email, change password.
 - Code splitting for Router.
 
-Main differences between this app and the example on serverless-stack.com:
+Main difference(s) between this app and the example on serverless-stack.com:
 
 - This app uses Bootstrap 4 with [reactstrap](https://reactstrap.github.io/) instead of Bootstrap 3.
+
+## Demo
+
+- In an [S3 bucket](http://react-component-user-auth-amplify.s3-website-us-east-1.amazonaws.com/).
 
 ## Installation
 
@@ -47,4 +63,4 @@ Follow the guide on [Serverless Stack website](https://serverless-stack.com/#tab
     > vnguyen@ndi.org &nbsp;&middot;&nbsp;
     > [LinkedIn](https://www.linkedin.com/in/nguyendviet)
 
-**[⬆ back to top](#documentation)**
+**[⬆ back to top](#table-of-contents)**
